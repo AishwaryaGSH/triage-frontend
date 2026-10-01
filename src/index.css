@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 220 25% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 220 20% 24%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 16% 47%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 88%;
+    --input: 214 20% 82%;
+    --ring: 221 83% 53%;
+    --radius: .75rem;
+  }
+
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground antialiased; margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+}
+
+@layer components {
+  .triage-card { @apply rounded-xl border bg-card text-card-foreground shadow-sm; }
+  .triage-muted { @apply text-muted-foreground; }
+}
