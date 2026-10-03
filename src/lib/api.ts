@@ -10,6 +10,8 @@ export interface TriageProgress {
   error?: string | null;
   saved?: number;
   failed?: number;
+  failed_patient_ids?: string[];
+  persistence_errors?: Record<string, string>;
 }
 
 export interface TriageRunRequest {

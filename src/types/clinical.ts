@@ -23,9 +23,14 @@ export interface PatientMasterView {
   strengthAsymmetry?: number | null;
   absoluteForceLevel?: string | null;
   romAsymmetryDegrees?: number | null;
-  source_data?: Record<string, unknown>;
-  extracted_fields?: Record<string, any>;
-  data_quality_flags?: Record<string, boolean>;
-  status?: string;
-  attempt_status?: string;
+  status?: string | null;
+  attempt_status?: string | null;
+  attempt_error?: string | null;
+  created_at?: string | null;
+  updated_at?: string | null;
+  attempt_started_at?: string | null;
+  attempt_completed_at?: string | null;
+  source_data?: Record<string, unknown> | null;
+  extracted_fields?: Record<string, any> | null;
+  data_quality_flags?: Record<string, boolean> | null;
 }
